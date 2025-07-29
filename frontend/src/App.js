@@ -32,6 +32,84 @@ const SAMPLE_RESTAURANTS = [
     delivery_time: "30-40 mins",
     vendor_id: "vendor2",
     is_active: true
+  },
+  {
+    id: "rest3",
+    name: "Burger Palace",
+    description: "Juicy burgers and crispy fries with gourmet toppings",
+    cuisine_type: "American",
+    address: "789 Burger Street, Bangalore",
+    phone: "+91 9876543212",
+    image_url: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxyZXN0YXVyYW50c3xlbnwwfHx8fDE3NTM3NzY4NTd8MA&ixlib=rb-4.1.0&q=85",
+    rating: 4.3,
+    delivery_time: "20-30 mins",
+    vendor_id: "vendor3",
+    is_active: true
+  },
+  {
+    id: "rest4",
+    name: "Dragon Wok",
+    description: "Authentic Chinese cuisine with fresh noodles and dumplings",
+    cuisine_type: "Chinese",
+    address: "321 China Town, Chennai",
+    phone: "+91 9876543213",
+    image_url: "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg",
+    rating: 4.4,
+    delivery_time: "35-45 mins",
+    vendor_id: "vendor4",
+    is_active: true
+  },
+  {
+    id: "rest5",
+    name: "Taco Fiesta",
+    description: "Mexican street food with authentic spices and fresh ingredients",
+    cuisine_type: "Mexican",
+    address: "555 Salsa Street, Pune",
+    phone: "+91 9876543214",
+    image_url: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxyZXN0YXVyYW50c3xlbnwwfHx8fDE3NTM3NzY4NTd8MA&ixlib=rb-4.1.0&q=85",
+    rating: 4.1,
+    delivery_time: "25-35 mins",
+    vendor_id: "vendor5",
+    is_active: true
+  },
+  {
+    id: "rest6",
+    name: "Sushi Master",
+    description: "Fresh sushi and Japanese delicacies made by expert chefs",
+    cuisine_type: "Japanese",
+    address: "888 Tokyo Lane, Hyderabad",
+    phone: "+91 9876543215",
+    image_url: "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg",
+    rating: 4.7,
+    delivery_time: "40-50 mins",
+    vendor_id: "vendor6",
+    is_active: true
+  },
+  {
+    id: "rest7",
+    name: "Biryani House",
+    description: "Traditional Hyderabadi biryani with aromatic basmati rice",
+    cuisine_type: "Indian",
+    address: "999 Biryani Boulevard, Lucknow",
+    phone: "+91 9876543216",
+    image_url: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxyZXN0YXVyYW50c3xlbnwwfHx8fDE3NTM3NzY4NTd8MA&ixlib=rb-4.1.0&q=85",
+    rating: 4.6,
+    delivery_time: "30-40 mins",
+    vendor_id: "vendor7",
+    is_active: true
+  },
+  {
+    id: "rest8",
+    name: "Healthy Bites",
+    description: "Fresh salads, smoothie bowls, and healthy meal options",
+    cuisine_type: "Healthy",
+    address: "444 Green Street, Gurgaon",
+    phone: "+91 9876543217",
+    image_url: "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg",
+    rating: 4.0,
+    delivery_time: "15-25 mins",
+    vendor_id: "vendor8",
+    is_active: true
   }
 ];
 
