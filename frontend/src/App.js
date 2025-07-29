@@ -656,24 +656,65 @@ function App() {
               Order food online from your favorite restaurants
             </h1>
             <p className="text-xl mb-8">Fast delivery • Wide variety • Great taste</p>
-            <div className="max-w-md mx-auto">
-              <input 
-                type="text" 
-                placeholder="Enter your location"
-                className="w-full px-4 py-3 rounded-lg text-gray-800"
-              />
+            
+            {/* City and Location Selection */}
+            <div className="max-w-2xl mx-auto">
+              <div className="flex flex-col md:flex-row gap-4 mb-6">
+                <select 
+                  value={selectedCity}
+                  onChange={(e) => setSelectedCity(e.target.value)}
+                  className="flex-1 px-4 py-3 rounded-lg text-gray-800 text-lg"
+                >
+                  {CITIES.map(city => (
+                    <option key={city.id} value={city.id}>{city.name}</option>
+                  ))}
+                </select>
+                <input 
+                  type="text" 
+                  placeholder="Enter your exact location"
+                  className="flex-1 px-4 py-3 rounded-lg text-gray-800 text-lg"
+                />
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Restaurants Grid */}
+        {/* Cuisine Filter */}
         <section className="max-w-6xl mx-auto p-6">
-          <h2 className="text-3xl font-bold mb-6 text-gray-800">Restaurants near you</h2>
+          <div className="flex flex-wrap gap-2 mb-6">
+            {CUISINES.map(cuisine => (
+              <button
+                key={cuisine}
+                onClick={() => setSelectedCuisine(cuisine)}
+                className={`px-4 py-2 rounded-full border transition-all duration-200 ${
+                  selectedCuisine === cuisine
+                    ? 'bg-orange-500 text-white border-orange-500'
+                    : 'border-gray-300 text-gray-700 hover:border-orange-500 hover:text-orange-500'
+                }`}
+              >
+                {cuisine}
+              </button>
+            ))}
+          </div>
+        </section>
+
+        {/* Restaurants Grid */}
+        <section className="max-w-6xl mx-auto px-6 pb-6">
+          <div className="flex justify-between items-center mb-6">
+            <h2 className="text-3xl font-bold text-gray-800">
+              {selectedCity !== 'all' 
+                ? `Restaurants in ${CITIES.find(c => c.id === selectedCity)?.name}` 
+                : 'All Restaurants'
+              }
+              {selectedCuisine !== 'All' && ` - ${selectedCuisine} Cuisine`}
+            </h2>
+            <p className="text-gray-500">{filteredRestaurants.length} restaurants found</p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {restaurants.map(restaurant => (
+            {filteredRestaurants.map(restaurant => (
               <div 
                 key={restaurant.id} 
-                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
+                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer transform hover:scale-105 duration-200"
                 onClick={() => setSelectedRestaurant(restaurant)}
               >
                 <img 
@@ -682,17 +723,34 @@ function App() {
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-4">
-                  <h3 className="font-bold text-xl mb-2">{restaurant.name}</h3>
-                  <p className="text-gray-600 text-sm mb-2">{restaurant.description}</p>
+                  <div className="flex justify-between items-start mb-2">
+                    <h3 className="font-bold text-xl">{restaurant.name}</h3>
+                    <span className="bg-orange-100 text-orange-600 px-2 py-1 rounded text-sm">
+                      {restaurant.cuisine_type}
+                    </span>
+                  </div>
+                  <p className="text-gray-600 text-sm mb-3">{restaurant.description}</p>
                   <div className="flex justify-between items-center">
                     <span className="text-green-600 font-medium">★ {restaurant.rating}</span>
                     <span className="text-orange-500 font-medium">{restaurant.delivery_time}</span>
                   </div>
-                  <p className="text-gray-500 text-sm mt-2">{restaurant.cuisine_type}</p>
+                  <p className="text-gray-500 text-sm mt-2">📍 {restaurant.address}</p>
                 </div>
               </div>
             ))}
           </div>
+          
+          {filteredRestaurants.length === 0 && (
+            <div className="text-center py-12">
+              <p className="text-gray-500 text-lg">No restaurants found matching your criteria</p>
+              <button 
+                onClick={() => {setSelectedCity('all'); setSelectedCuisine('All')}}
+                className="mt-4 px-6 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600"
+              >
+                View All Restaurants
+              </button>
+            </div>
+          )}
         </section>
 
         {/* Order History */}
