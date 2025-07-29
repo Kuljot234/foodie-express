@@ -1,0 +1,740 @@
+{
+  "summary": {
+    "total_tests": 28,
+    "passed_tests": 28,
+    "failed_tests": 0,
+    "success_rate": 100.0
+  },
+  "test_data": {
+    "customer": {
+      "id": "f5679fc5-d3dc-4431-a56b-47db65e1c0ec",
+      "name": "Sarah Johnson",
+      "email": "sarah.johnson@email.com",
+      "phone": "+1-555-0123",
+      "role": "customer",
+      "address": "123 Oak Street, Downtown, NY 10001",
+      "created_at": "2025-07-29T08:19:54.032764"
+    },
+    "vendor": {
+      "id": "d817d99e-3e85-4b28-b413-3a8d565dfe5a",
+      "name": "Marco Rossi",
+      "email": "marco.rossi@restaurant.com",
+      "phone": "+1-555-0456",
+      "role": "vendor",
+      "address": "456 Main Street, Business District, NY 10002",
+      "created_at": "2025-07-29T08:19:54.064791"
+    },
+    "delivery_partner": {
+      "id": "ce87942e-e176-4ccb-880f-e28d4959b325",
+      "name": "Alex Chen",
+      "email": "alex.chen@delivery.com",
+      "phone": "+1-555-0789",
+      "role": "delivery_partner",
+      "address": null,
+      "created_at": "2025-07-29T08:19:54.079443"
+    },
+    "restaurant": {
+      "id": "3336ca9c-e67e-4cba-9085-20acea993d28",
+      "name": "Bella Italia Ristorante",
+      "description": "Authentic Italian cuisine with fresh ingredients and traditional recipes passed down through generations",
+      "cuisine_type": "Italian",
+      "address": "789 Culinary Avenue, Little Italy, NY 10003",
+      "phone": "+1-555-0321",
+      "image_url": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5",
+      "rating": 4.0,
+      "delivery_time": "30-45 mins",
+      "vendor_id": "d817d99e-3e85-4b28-b413-3a8d565dfe5a",
+      "is_active": true,
+      "created_at": "2025-07-29T08:19:54.167418"
+    },
+    "menu_items": [
+      {
+        "id": "01ab6e16-3b07-45c2-848b-046cfd6b2316",
+        "restaurant_id": "3336ca9c-e67e-4cba-9085-20acea993d28",
+        "name": "Margherita Pizza",
+        "description": "Classic pizza with fresh mozzarella, tomato sauce, and basil leaves",
+        "price": 18.99,
+        "category": "Pizza",
+        "image_url": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3",
+        "is_available": true,
+        "is_veg": true,
+        "created_at": "2025-07-29T08:19:54.308429"
+      },
+      {
+        "id": "e873aad1-d39e-46fa-bf43-f1fdca8171e2",
+        "restaurant_id": "3336ca9c-e67e-4cba-9085-20acea993d28",
+        "name": "Chicken Alfredo Pasta",
+        "description": "Creamy fettuccine pasta with grilled chicken and parmesan cheese",
+        "price": 22.5,
+        "category": "Pasta",
+        "image_url": "https://images.unsplash.com/photo-1621996346565-e3dbc353d2e5",
+        "is_available": true,
+        "is_veg": false,
+        "created_at": "2025-07-29T08:19:54.371338"
+      },
+      {
+        "id": "7e0abc1e-9fe7-4592-a7e4-758c51c5973f",
+        "restaurant_id": "3336ca9c-e67e-4cba-9085-20acea993d28",
+        "name": "Caesar Salad",
+        "description": "Fresh romaine lettuce with caesar dressing, croutons, and parmesan",
+        "price": 14.99,
+        "category": "Salads",
+        "image_url": "https://images.unsplash.com/photo-1546793665-c74683f339c1",
+        "is_available": true,
+        "is_veg": true,
+        "created_at": "2025-07-29T08:19:54.380042"
+      }
+    ],
+    "order": {
+      "id": "5e912786-4064-40c0-a0dc-39fae9f7ae55",
+      "customer_id": "f5679fc5-d3dc-4431-a56b-47db65e1c0ec",
+      "restaurant_id": "3336ca9c-e67e-4cba-9085-20acea993d28",
+      "delivery_partner_id": null,
+      "items": [
+        {
+          "menu_item_id": "01ab6e16-3b07-45c2-848b-046cfd6b2316",
+          "name": "Margherita Pizza",
+          "price": 18.99,
+          "quantity": 2
+        },
+        {
+          "menu_item_id": "e873aad1-d39e-46fa-bf43-f1fdca8171e2",
+          "name": "Chicken Alfredo Pasta",
+          "price": 22.5,
+          "quantity": 1
+        }
+      ],
+      "total_amount": 60.48,
+      "delivery_address": "123 Oak Street, Downtown, NY 10001",
+      "customer_phone": "+1-555-0123",
+      "status": "pending",
+      "created_at": "2025-07-29T08:19:54.509162",
+      "estimated_delivery": "30-45 mins"
+    }
+  },
+  "results": [
+    {
+      "test": "Create Customer",
+      "success": true,
+      "message": "Customer created with ID: f5679fc5-d3dc-4431-a56b-47db65e1c0ec",
+      "timestamp": "2025-07-29T08:19:54.054950",
+      "response_data": {
+        "id": "f5679fc5-d3dc-4431-a56b-47db65e1c0ec",
+        "name": "Sarah Johnson",
+        "email": "sarah.johnson@email.com",
+        "phone": "+1-555-0123",
+        "role": "customer",
+        "address": "123 Oak Street, Downtown, NY 10001",
+        "created_at": "2025-07-29T08:19:54.032764"
+      }
+    },
+    {
+      "test": "Create Vendor",
+      "success": true,
+      "message": "Vendor created with ID: d817d99e-3e85-4b28-b413-3a8d565dfe5a",
+      "timestamp": "2025-07-29T08:19:54.068892",
+      "response_data": {
+        "id": "d817d99e-3e85-4b28-b413-3a8d565dfe5a",
+        "name": "Marco Rossi",
+        "email": "marco.rossi@restaurant.com",
+        "phone": "+1-555-0456",
+        "role": "vendor",
+        "address": "456 Main Street, Business District, NY 10002",
+        "created_at": "2025-07-29T08:19:54.064791"
+      }
+    },
+    {
+      "test": "Create Delivery Partner",
+      "success": true,
+      "message": "Delivery partner created with ID: ce87942e-e176-4ccb-880f-e28d4959b325",
+      "timestamp": "2025-07-29T08:19:54.084105",
+      "response_data": {
+        "id": "ce87942e-e176-4ccb-880f-e28d4959b325",
+        "name": "Alex Chen",
+        "email": "alex.chen@delivery.com",
+        "phone": "+1-555-0789",
+        "role": "delivery_partner",
+        "address": null,
+        "created_at": "2025-07-29T08:19:54.079443"
+      }
+    },
+    {
+      "test": "Get User by ID",
+      "success": true,
+      "message": "Retrieved user: Sarah Johnson",
+      "timestamp": "2025-07-29T08:19:54.136239",
+      "response_data": {
+        "id": "f5679fc5-d3dc-4431-a56b-47db65e1c0ec",
+        "name": "Sarah Johnson",
+        "email": "sarah.johnson@email.com",
+        "phone": "+1-555-0123",
+        "role": "customer",
+        "address": "123 Oak Street, Downtown, NY 10001",
+        "created_at": "2025-07-29T08:19:54.032000"
+      }
+    },
+    {
+      "test": "Get Non-existent User",
+      "success": true,
+      "message": "Correctly returned 404 for non-existent user",
+      "timestamp": "2025-07-29T08:19:54.146927",
+      "response_data": null
+    },
+    {
+      "test": "Create Restaurant",
+      "success": true,
+      "message": "Restaurant created with ID: 3336ca9c-e67e-4cba-9085-20acea993d28",
+      "timestamp": "2025-07-29T08:19:54.224168",
+      "response_data": {
+        "id": "3336ca9c-e67e-4cba-9085-20acea993d28",
+        "name": "Bella Italia Ristorante",
+        "description": "Authentic Italian cuisine with fresh ingredients and traditional recipes passed down through generations",
+        "cuisine_type": "Italian",
+        "address": "789 Culinary Avenue, Little Italy, NY 10003",
+        "phone": "+1-555-0321",
+        "image_url": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5",
+        "rating": 4.0,
+        "delivery_time": "30-45 mins",
+        "vendor_id": "d817d99e-3e85-4b28-b413-3a8d565dfe5a",
+        "is_active": true,
+        "created_at": "2025-07-29T08:19:54.167418"
+      }
+    },
+    {
+      "test": "Get All Restaurants",
+      "success": true,
+      "message": "Retrieved 1 restaurants",
+      "timestamp": "2025-07-29T08:19:54.233124",
+      "response_data": [
+        {
+          "id": "3336ca9c-e67e-4cba-9085-20acea993d28",
+          "name": "Bella Italia Ristorante",
+          "description": "Authentic Italian cuisine with fresh ingredients and traditional recipes passed down through generations",
+          "cuisine_type": "Italian",
+          "address": "789 Culinary Avenue, Little Italy, NY 10003",
+          "phone": "+1-555-0321",
+          "image_url": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5",
+          "rating": 4.0,
+          "delivery_time": "30-45 mins",
+          "vendor_id": "d817d99e-3e85-4b28-b413-3a8d565dfe5a",
+          "is_active": true,
+          "created_at": "2025-07-29T08:19:54.167000"
+        }
+      ]
+    },
+    {
+      "test": "Get Restaurant by ID",
+      "success": true,
+      "message": "Retrieved restaurant: Bella Italia Ristorante",
+      "timestamp": "2025-07-29T08:19:54.242721",
+      "response_data": {
+        "id": "3336ca9c-e67e-4cba-9085-20acea993d28",
+        "name": "Bella Italia Ristorante",
+        "description": "Authentic Italian cuisine with fresh ingredients and traditional recipes passed down through generations",
+        "cuisine_type": "Italian",
+        "address": "789 Culinary Avenue, Little Italy, NY 10003",
+        "phone": "+1-555-0321",
+        "image_url": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5",
+        "rating": 4.0,
+        "delivery_time": "30-45 mins",
+        "vendor_id": "d817d99e-3e85-4b28-b413-3a8d565dfe5a",
+        "is_active": true,
+        "created_at": "2025-07-29T08:19:54.167000"
+      }
+    },
+    {
+      "test": "Get Restaurants by Vendor",
+      "success": true,
+      "message": "Retrieved 1 restaurants for vendor",
+      "timestamp": "2025-07-29T08:19:54.294380",
+      "response_data": [
+        {
+          "id": "3336ca9c-e67e-4cba-9085-20acea993d28",
+          "name": "Bella Italia Ristorante",
+          "description": "Authentic Italian cuisine with fresh ingredients and traditional recipes passed down through generations",
+          "cuisine_type": "Italian",
+          "address": "789 Culinary Avenue, Little Italy, NY 10003",
+          "phone": "+1-555-0321",
+          "image_url": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5",
+          "rating": 4.0,
+          "delivery_time": "30-45 mins",
+          "vendor_id": "d817d99e-3e85-4b28-b413-3a8d565dfe5a",
+          "is_active": true,
+          "created_at": "2025-07-29T08:19:54.167000"
+        }
+      ]
+    },
+    {
+      "test": "Get Non-existent Restaurant",
+      "success": true,
+      "message": "Correctly returned 404 for non-existent restaurant",
+      "timestamp": "2025-07-29T08:19:54.302835",
+      "response_data": null
+    },
+    {
+      "test": "Create Menu Item 1",
+      "success": true,
+      "message": "Menu item created: Margherita Pizza",
+      "timestamp": "2025-07-29T08:19:54.365297",
+      "response_data": {
+        "id": "01ab6e16-3b07-45c2-848b-046cfd6b2316",
+        "restaurant_id": "3336ca9c-e67e-4cba-9085-20acea993d28",
+        "name": "Margherita Pizza",
+        "description": "Classic pizza with fresh mozzarella, tomato sauce, and basil leaves",
+        "price": 18.99,
+        "category": "Pizza",
+        "image_url": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3",
+        "is_available": true,
+        "is_veg": true,
+        "created_at": "2025-07-29T08:19:54.308429"
+      }
+    },
+    {
+      "test": "Create Menu Item 2",
+      "success": true,
+      "message": "Menu item created: Chicken Alfredo Pasta",
+      "timestamp": "2025-07-29T08:19:54.375291",
+      "response_data": {
+        "id": "e873aad1-d39e-46fa-bf43-f1fdca8171e2",
+        "restaurant_id": "3336ca9c-e67e-4cba-9085-20acea993d28",
+        "name": "Chicken Alfredo Pasta",
+        "description": "Creamy fettuccine pasta with grilled chicken and parmesan cheese",
+        "price": 22.5,
+        "category": "Pasta",
+        "image_url": "https://images.unsplash.com/photo-1621996346565-e3dbc353d2e5",
+        "is_available": true,
+        "is_veg": false,
+        "created_at": "2025-07-29T08:19:54.371338"
+      }
+    },
+    {
+      "test": "Create Menu Item 3",
+      "success": true,
+      "message": "Menu item created: Caesar Salad",
+      "timestamp": "2025-07-29T08:19:54.424427",
+      "response_data": {
+        "id": "7e0abc1e-9fe7-4592-a7e4-758c51c5973f",
+        "restaurant_id": "3336ca9c-e67e-4cba-9085-20acea993d28",
+        "name": "Caesar Salad",
+        "description": "Fresh romaine lettuce with caesar dressing, croutons, and parmesan",
+        "price": 14.99,
+        "category": "Salads",
+        "image_url": "https://images.unsplash.com/photo-1546793665-c74683f339c1",
+        "is_available": true,
+        "is_veg": true,
+        "created_at": "2025-07-29T08:19:54.380042"
+      }
+    },
+    {
+      "test": "Get Menu Items by Restaurant",
+      "success": true,
+      "message": "Retrieved 3 menu items",
+      "timestamp": "2025-07-29T08:19:54.433967",
+      "response_data": [
+        {
+          "id": "01ab6e16-3b07-45c2-848b-046cfd6b2316",
+          "restaurant_id": "3336ca9c-e67e-4cba-9085-20acea993d28",
+          "name": "Margherita Pizza",
+          "description": "Classic pizza with fresh mozzarella, tomato sauce, and basil leaves",
+          "price": 18.99,
+          "category": "Pizza",
+          "image_url": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3",
+          "is_available": true,
+          "is_veg": true,
+          "created_at": "2025-07-29T08:19:54.308000"
+        },
+        {
+          "id": "e873aad1-d39e-46fa-bf43-f1fdca8171e2",
+          "restaurant_id": "3336ca9c-e67e-4cba-9085-20acea993d28",
+          "name": "Chicken Alfredo Pasta",
+          "description": "Creamy fettuccine pasta with grilled chicken and parmesan cheese",
+          "price": 22.5,
+          "category": "Pasta",
+          "image_url": "https://images.unsplash.com/photo-1621996346565-e3dbc353d2e5",
+          "is_available": true,
+          "is_veg": false,
+          "created_at": "2025-07-29T08:19:54.371000"
+        },
+        {
+          "id": "7e0abc1e-9fe7-4592-a7e4-758c51c5973f",
+          "restaurant_id": "3336ca9c-e67e-4cba-9085-20acea993d28",
+          "name": "Caesar Salad",
+          "description": "Fresh romaine lettuce with caesar dressing, croutons, and parmesan",
+          "price": 14.99,
+          "category": "Salads",
+          "image_url": "https://images.unsplash.com/photo-1546793665-c74683f339c1",
+          "is_available": true,
+          "is_veg": true,
+          "created_at": "2025-07-29T08:19:54.380000"
+        }
+      ]
+    },
+    {
+      "test": "Update Menu Item",
+      "success": true,
+      "message": "Menu item updated: Margherita Pizza - Special",
+      "timestamp": "2025-07-29T08:19:54.485456",
+      "response_data": {
+        "id": "01ab6e16-3b07-45c2-848b-046cfd6b2316",
+        "restaurant_id": "3336ca9c-e67e-4cba-9085-20acea993d28",
+        "name": "Margherita Pizza - Special",
+        "description": "Classic pizza with fresh mozzarella, tomato sauce, basil leaves, and extra cheese",
+        "price": 20.99,
+        "category": "Pizza",
+        "image_url": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3",
+        "is_available": true,
+        "is_veg": true,
+        "created_at": "2025-07-29T08:19:54.308000"
+      }
+    },
+    {
+      "test": "Delete Menu Item",
+      "success": true,
+      "message": "Menu item deleted: Caesar Salad",
+      "timestamp": "2025-07-29T08:19:54.493822",
+      "response_data": null
+    },
+    {
+      "test": "Update Non-existent Menu Item",
+      "success": true,
+      "message": "Correctly returned 404 for non-existent menu item",
+      "timestamp": "2025-07-29T08:19:54.504413",
+      "response_data": null
+    },
+    {
+      "test": "Create Order",
+      "success": true,
+      "message": "Order created with ID: 5e912786-4064-40c0-a0dc-39fae9f7ae55",
+      "timestamp": "2025-07-29T08:19:54.577343",
+      "response_data": {
+        "id": "5e912786-4064-40c0-a0dc-39fae9f7ae55",
+        "customer_id": "f5679fc5-d3dc-4431-a56b-47db65e1c0ec",
+        "restaurant_id": "3336ca9c-e67e-4cba-9085-20acea993d28",
+        "delivery_partner_id": null,
+        "items": [
+          {
+            "menu_item_id": "01ab6e16-3b07-45c2-848b-046cfd6b2316",
+            "name": "Margherita Pizza",
+            "price": 18.99,
+            "quantity": 2
+          },
+          {
+            "menu_item_id": "e873aad1-d39e-46fa-bf43-f1fdca8171e2",
+            "name": "Chicken Alfredo Pasta",
+            "price": 22.5,
+            "quantity": 1
+          }
+        ],
+        "total_amount": 60.48,
+        "delivery_address": "123 Oak Street, Downtown, NY 10001",
+        "customer_phone": "+1-555-0123",
+        "status": "pending",
+        "created_at": "2025-07-29T08:19:54.509162",
+        "estimated_delivery": "30-45 mins"
+      }
+    },
+    {
+      "test": "Get Customer Orders",
+      "success": true,
+      "message": "Retrieved 1 orders for customer",
+      "timestamp": "2025-07-29T08:19:54.587102",
+      "response_data": [
+        {
+          "id": "5e912786-4064-40c0-a0dc-39fae9f7ae55",
+          "customer_id": "f5679fc5-d3dc-4431-a56b-47db65e1c0ec",
+          "restaurant_id": "3336ca9c-e67e-4cba-9085-20acea993d28",
+          "delivery_partner_id": null,
+          "items": [
+            {
+              "menu_item_id": "01ab6e16-3b07-45c2-848b-046cfd6b2316",
+              "name": "Margherita Pizza",
+              "price": 18.99,
+              "quantity": 2
+            },
+            {
+              "menu_item_id": "e873aad1-d39e-46fa-bf43-f1fdca8171e2",
+              "name": "Chicken Alfredo Pasta",
+              "price": 22.5,
+              "quantity": 1
+            }
+          ],
+          "total_amount": 60.48,
+          "delivery_address": "123 Oak Street, Downtown, NY 10001",
+          "customer_phone": "+1-555-0123",
+          "status": "pending",
+          "created_at": "2025-07-29T08:19:54.509000",
+          "estimated_delivery": "30-45 mins"
+        }
+      ]
+    },
+    {
+      "test": "Get Restaurant Orders",
+      "success": true,
+      "message": "Retrieved 1 orders for restaurant",
+      "timestamp": "2025-07-29T08:19:54.595155",
+      "response_data": [
+        {
+          "id": "5e912786-4064-40c0-a0dc-39fae9f7ae55",
+          "customer_id": "f5679fc5-d3dc-4431-a56b-47db65e1c0ec",
+          "restaurant_id": "3336ca9c-e67e-4cba-9085-20acea993d28",
+          "delivery_partner_id": null,
+          "items": [
+            {
+              "menu_item_id": "01ab6e16-3b07-45c2-848b-046cfd6b2316",
+              "name": "Margherita Pizza",
+              "price": 18.99,
+              "quantity": 2
+            },
+            {
+              "menu_item_id": "e873aad1-d39e-46fa-bf43-f1fdca8171e2",
+              "name": "Chicken Alfredo Pasta",
+              "price": 22.5,
+              "quantity": 1
+            }
+          ],
+          "total_amount": 60.48,
+          "delivery_address": "123 Oak Street, Downtown, NY 10001",
+          "customer_phone": "+1-555-0123",
+          "status": "pending",
+          "created_at": "2025-07-29T08:19:54.509000",
+          "estimated_delivery": "30-45 mins"
+        }
+      ]
+    },
+    {
+      "test": "Get Order by ID",
+      "success": true,
+      "message": "Retrieved order with status: pending",
+      "timestamp": "2025-07-29T08:19:54.644153",
+      "response_data": {
+        "id": "5e912786-4064-40c0-a0dc-39fae9f7ae55",
+        "customer_id": "f5679fc5-d3dc-4431-a56b-47db65e1c0ec",
+        "restaurant_id": "3336ca9c-e67e-4cba-9085-20acea993d28",
+        "delivery_partner_id": null,
+        "items": [
+          {
+            "menu_item_id": "01ab6e16-3b07-45c2-848b-046cfd6b2316",
+            "name": "Margherita Pizza",
+            "price": 18.99,
+            "quantity": 2
+          },
+          {
+            "menu_item_id": "e873aad1-d39e-46fa-bf43-f1fdca8171e2",
+            "name": "Chicken Alfredo Pasta",
+            "price": 22.5,
+            "quantity": 1
+          }
+        ],
+        "total_amount": 60.48,
+        "delivery_address": "123 Oak Street, Downtown, NY 10001",
+        "customer_phone": "+1-555-0123",
+        "status": "pending",
+        "created_at": "2025-07-29T08:19:54.509000",
+        "estimated_delivery": "30-45 mins"
+      }
+    },
+    {
+      "test": "Update Order Status to Accepted",
+      "success": true,
+      "message": "Order status updated to: accepted",
+      "timestamp": "2025-07-29T08:19:54.653560",
+      "response_data": {
+        "id": "5e912786-4064-40c0-a0dc-39fae9f7ae55",
+        "customer_id": "f5679fc5-d3dc-4431-a56b-47db65e1c0ec",
+        "restaurant_id": "3336ca9c-e67e-4cba-9085-20acea993d28",
+        "delivery_partner_id": null,
+        "items": [
+          {
+            "menu_item_id": "01ab6e16-3b07-45c2-848b-046cfd6b2316",
+            "name": "Margherita Pizza",
+            "price": 18.99,
+            "quantity": 2
+          },
+          {
+            "menu_item_id": "e873aad1-d39e-46fa-bf43-f1fdca8171e2",
+            "name": "Chicken Alfredo Pasta",
+            "price": 22.5,
+            "quantity": 1
+          }
+        ],
+        "total_amount": 60.48,
+        "delivery_address": "123 Oak Street, Downtown, NY 10001",
+        "customer_phone": "+1-555-0123",
+        "status": "accepted",
+        "created_at": "2025-07-29T08:19:54.509000",
+        "estimated_delivery": "30-45 mins"
+      }
+    },
+    {
+      "test": "Update Order Status to Ready",
+      "success": true,
+      "message": "Order status updated to: ready",
+      "timestamp": "2025-07-29T08:19:54.703930",
+      "response_data": {
+        "id": "5e912786-4064-40c0-a0dc-39fae9f7ae55",
+        "customer_id": "f5679fc5-d3dc-4431-a56b-47db65e1c0ec",
+        "restaurant_id": "3336ca9c-e67e-4cba-9085-20acea993d28",
+        "delivery_partner_id": null,
+        "items": [
+          {
+            "menu_item_id": "01ab6e16-3b07-45c2-848b-046cfd6b2316",
+            "name": "Margherita Pizza",
+            "price": 18.99,
+            "quantity": 2
+          },
+          {
+            "menu_item_id": "e873aad1-d39e-46fa-bf43-f1fdca8171e2",
+            "name": "Chicken Alfredo Pasta",
+            "price": 22.5,
+            "quantity": 1
+          }
+        ],
+        "total_amount": 60.48,
+        "delivery_address": "123 Oak Street, Downtown, NY 10001",
+        "customer_phone": "+1-555-0123",
+        "status": "ready",
+        "created_at": "2025-07-29T08:19:54.509000",
+        "estimated_delivery": "30-45 mins"
+      }
+    },
+    {
+      "test": "Get Available Orders",
+      "success": true,
+      "message": "Retrieved 1 available orders",
+      "timestamp": "2025-07-29T08:19:54.753152",
+      "response_data": [
+        {
+          "id": "5e912786-4064-40c0-a0dc-39fae9f7ae55",
+          "customer_id": "f5679fc5-d3dc-4431-a56b-47db65e1c0ec",
+          "restaurant_id": "3336ca9c-e67e-4cba-9085-20acea993d28",
+          "delivery_partner_id": null,
+          "items": [
+            {
+              "menu_item_id": "01ab6e16-3b07-45c2-848b-046cfd6b2316",
+              "name": "Margherita Pizza",
+              "price": 18.99,
+              "quantity": 2
+            },
+            {
+              "menu_item_id": "e873aad1-d39e-46fa-bf43-f1fdca8171e2",
+              "name": "Chicken Alfredo Pasta",
+              "price": 22.5,
+              "quantity": 1
+            }
+          ],
+          "total_amount": 60.48,
+          "delivery_address": "123 Oak Street, Downtown, NY 10001",
+          "customer_phone": "+1-555-0123",
+          "status": "ready",
+          "created_at": "2025-07-29T08:19:54.509000",
+          "estimated_delivery": "30-45 mins"
+        }
+      ]
+    },
+    {
+      "test": "Assign Delivery Partner",
+      "success": true,
+      "message": "Order assigned to delivery partner: ce87942e-e176-4ccb-880f-e28d4959b325",
+      "timestamp": "2025-07-29T08:19:54.762590",
+      "response_data": {
+        "id": "5e912786-4064-40c0-a0dc-39fae9f7ae55",
+        "customer_id": "f5679fc5-d3dc-4431-a56b-47db65e1c0ec",
+        "restaurant_id": "3336ca9c-e67e-4cba-9085-20acea993d28",
+        "delivery_partner_id": "ce87942e-e176-4ccb-880f-e28d4959b325",
+        "items": [
+          {
+            "menu_item_id": "01ab6e16-3b07-45c2-848b-046cfd6b2316",
+            "name": "Margherita Pizza",
+            "price": 18.99,
+            "quantity": 2
+          },
+          {
+            "menu_item_id": "e873aad1-d39e-46fa-bf43-f1fdca8171e2",
+            "name": "Chicken Alfredo Pasta",
+            "price": 22.5,
+            "quantity": 1
+          }
+        ],
+        "total_amount": 60.48,
+        "delivery_address": "123 Oak Street, Downtown, NY 10001",
+        "customer_phone": "+1-555-0123",
+        "status": "picked_up",
+        "created_at": "2025-07-29T08:19:54.509000",
+        "estimated_delivery": "30-45 mins"
+      }
+    },
+    {
+      "test": "Get Delivery Partner Orders",
+      "success": true,
+      "message": "Retrieved 1 orders for delivery partner",
+      "timestamp": "2025-07-29T08:19:54.812814",
+      "response_data": [
+        {
+          "id": "5e912786-4064-40c0-a0dc-39fae9f7ae55",
+          "customer_id": "f5679fc5-d3dc-4431-a56b-47db65e1c0ec",
+          "restaurant_id": "3336ca9c-e67e-4cba-9085-20acea993d28",
+          "delivery_partner_id": "ce87942e-e176-4ccb-880f-e28d4959b325",
+          "items": [
+            {
+              "menu_item_id": "01ab6e16-3b07-45c2-848b-046cfd6b2316",
+              "name": "Margherita Pizza",
+              "price": 18.99,
+              "quantity": 2
+            },
+            {
+              "menu_item_id": "e873aad1-d39e-46fa-bf43-f1fdca8171e2",
+              "name": "Chicken Alfredo Pasta",
+              "price": 22.5,
+              "quantity": 1
+            }
+          ],
+          "total_amount": 60.48,
+          "delivery_address": "123 Oak Street, Downtown, NY 10001",
+          "customer_phone": "+1-555-0123",
+          "status": "picked_up",
+          "created_at": "2025-07-29T08:19:54.509000",
+          "estimated_delivery": "30-45 mins"
+        }
+      ]
+    },
+    {
+      "test": "Update Order Status to Delivered",
+      "success": true,
+      "message": "Order status updated to: delivered",
+      "timestamp": "2025-07-29T08:19:54.863795",
+      "response_data": {
+        "id": "5e912786-4064-40c0-a0dc-39fae9f7ae55",
+        "customer_id": "f5679fc5-d3dc-4431-a56b-47db65e1c0ec",
+        "restaurant_id": "3336ca9c-e67e-4cba-9085-20acea993d28",
+        "delivery_partner_id": "ce87942e-e176-4ccb-880f-e28d4959b325",
+        "items": [
+          {
+            "menu_item_id": "01ab6e16-3b07-45c2-848b-046cfd6b2316",
+            "name": "Margherita Pizza",
+            "price": 18.99,
+            "quantity": 2
+          },
+          {
+            "menu_item_id": "e873aad1-d39e-46fa-bf43-f1fdca8171e2",
+            "name": "Chicken Alfredo Pasta",
+            "price": 22.5,
+            "quantity": 1
+          }
+        ],
+        "total_amount": 60.48,
+        "delivery_address": "123 Oak Street, Downtown, NY 10001",
+        "customer_phone": "+1-555-0123",
+        "status": "delivered",
+        "created_at": "2025-07-29T08:19:54.509000",
+        "estimated_delivery": "30-45 mins"
+      }
+    },
+    {
+      "test": "Update Non-existent Order",
+      "success": true,
+      "message": "Correctly returned 404 for non-existent order",
+      "timestamp": "2025-07-29T08:19:54.873234",
+      "response_data": null
+    }
+  ]
+}
