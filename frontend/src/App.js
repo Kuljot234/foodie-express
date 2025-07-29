@@ -136,6 +136,28 @@ const SAMPLE_MENU_ITEMS = {
       image_url: "https://images.pexels.com/photos/1542252/pexels-photo-1542252.jpeg",
       is_available: true,
       is_veg: true
+    },
+    {
+      id: "item17",
+      restaurant_id: "rest1",
+      name: "Dal Makhani",
+      description: "Rich and creamy black lentils cooked with butter",
+      price: 199,
+      category: "Main Course",
+      image_url: "https://images.pexels.com/photos/1542252/pexels-photo-1542252.jpeg",
+      is_available: true,
+      is_veg: true
+    },
+    {
+      id: "item18",
+      restaurant_id: "rest1",
+      name: "Chicken Biryani",
+      description: "Aromatic basmati rice with spiced chicken pieces",
+      price: 349,
+      category: "Rice & Biryani",
+      image_url: "https://images.pexels.com/photos/1542252/pexels-photo-1542252.jpeg",
+      is_available: true,
+      is_veg: false
     }
   ],
   "rest2": [
@@ -146,6 +168,260 @@ const SAMPLE_MENU_ITEMS = {
       description: "Classic pizza with mozzarella and basil",
       price: 399,
       category: "Pizza",
+      image_url: "https://images.pexels.com/photos/1542252/pexels-photo-1542252.jpeg",
+      is_available: true,
+      is_veg: true
+    },
+    {
+      id: "item19",
+      restaurant_id: "rest2",
+      name: "Pepperoni Pizza",
+      description: "Classic pizza with spicy pepperoni and cheese",
+      price: 449,
+      category: "Pizza",
+      image_url: "https://images.pexels.com/photos/1542252/pexels-photo-1542252.jpeg",
+      is_available: true,
+      is_veg: false
+    },
+    {
+      id: "item20",
+      restaurant_id: "rest2",
+      name: "Chicken Alfredo Pasta",
+      description: "Creamy white sauce pasta with grilled chicken",
+      price: 329,
+      category: "Pasta",
+      image_url: "https://images.pexels.com/photos/1542252/pexels-photo-1542252.jpeg",
+      is_available: true,
+      is_veg: false
+    }
+  ],
+  "rest3": [
+    {
+      id: "item4",
+      restaurant_id: "rest3",
+      name: "Classic Cheeseburger",
+      description: "Juicy beef patty with cheese, lettuce, tomato and special sauce",
+      price: 299,
+      category: "Burgers",
+      image_url: "https://images.pexels.com/photos/1542252/pexels-photo-1542252.jpeg",
+      is_available: true,
+      is_veg: false
+    },
+    {
+      id: "item5",
+      restaurant_id: "rest3",
+      name: "Chicken Burger",
+      description: "Grilled chicken breast with mayo and fresh vegetables",
+      price: 279,
+      category: "Burgers",
+      image_url: "https://images.pexels.com/photos/1542252/pexels-photo-1542252.jpeg",
+      is_available: true,
+      is_veg: false
+    },
+    {
+      id: "item6",
+      restaurant_id: "rest3",
+      name: "Veg Deluxe Burger",
+      description: "Plant-based patty with avocado and fresh veggies",
+      price: 259,
+      category: "Burgers",
+      image_url: "https://images.pexels.com/photos/1542252/pexels-photo-1542252.jpeg",
+      is_available: true,
+      is_veg: true
+    },
+    {
+      id: "item7",
+      restaurant_id: "rest3",
+      name: "Loaded Fries",
+      description: "Crispy fries topped with cheese, bacon and sour cream",
+      price: 179,
+      category: "Sides",
+      image_url: "https://images.pexels.com/photos/1542252/pexels-photo-1542252.jpeg",
+      is_available: true,
+      is_veg: false
+    }
+  ],
+  "rest4": [
+    {
+      id: "item8",
+      restaurant_id: "rest4",
+      name: "Chicken Chowmein",
+      description: "Stir-fried noodles with chicken and mixed vegetables",
+      price: 229,
+      category: "Noodles",
+      image_url: "https://images.pexels.com/photos/1542252/pexels-photo-1542252.jpeg",
+      is_available: true,
+      is_veg: false
+    },
+    {
+      id: "item9",
+      restaurant_id: "rest4",
+      name: "Veg Hakka Noodles",
+      description: "Indo-Chinese style noodles with fresh vegetables",
+      price: 199,
+      category: "Noodles",
+      image_url: "https://images.pexels.com/photos/1542252/pexels-photo-1542252.jpeg",
+      is_available: true,
+      is_veg: true
+    },
+    {
+      id: "item10",
+      restaurant_id: "rest4",
+      name: "Chicken Manchurian",
+      description: "Crispy chicken balls in spicy and tangy sauce",
+      price: 269,
+      category: "Main Course",
+      image_url: "https://images.pexels.com/photos/1542252/pexels-photo-1542252.jpeg",
+      is_available: true,
+      is_veg: false
+    },
+    {
+      id: "item11",
+      restaurant_id: "rest4",
+      name: "Veg Fried Rice",
+      description: "Wok-tossed rice with mixed vegetables and soy sauce",
+      price: 179,
+      category: "Rice",
+      image_url: "https://images.pexels.com/photos/1542252/pexels-photo-1542252.jpeg",
+      is_available: true,
+      is_veg: true
+    }
+  ],
+  "rest5": [
+    {
+      id: "item12",
+      restaurant_id: "rest5",
+      name: "Chicken Tacos",
+      description: "Soft corn tortillas with grilled chicken and salsa",
+      price: 249,
+      category: "Tacos",
+      image_url: "https://images.pexels.com/photos/1542252/pexels-photo-1542252.jpeg",
+      is_available: true,
+      is_veg: false
+    },
+    {
+      id: "item13",
+      restaurant_id: "rest5",
+      name: "Beef Burrito",
+      description: "Large flour tortilla with seasoned beef and beans",
+      price: 299,
+      category: "Burritos",
+      image_url: "https://images.pexels.com/photos/1542252/pexels-photo-1542252.jpeg",
+      is_available: true,
+      is_veg: false
+    },
+    {
+      id: "item21",
+      restaurant_id: "rest5",
+      name: "Nachos Supreme",
+      description: "Crispy tortilla chips with cheese, jalapeños and sour cream",
+      price: 219,
+      category: "Appetizers",
+      image_url: "https://images.pexels.com/photos/1542252/pexels-photo-1542252.jpeg",
+      is_available: true,
+      is_veg: true
+    }
+  ],
+  "rest6": [
+    {
+      id: "item14",
+      restaurant_id: "rest6",
+      name: "Salmon Sushi Roll",
+      description: "Fresh salmon with avocado and cucumber",
+      price: 399,
+      category: "Sushi",
+      image_url: "https://images.pexels.com/photos/1542252/pexels-photo-1542252.jpeg",
+      is_available: true,
+      is_veg: false
+    },
+    {
+      id: "item15",
+      restaurant_id: "rest6",
+      name: "Chicken Teriyaki",
+      description: "Grilled chicken with teriyaki sauce and steamed rice",
+      price: 349,
+      category: "Main Course",
+      image_url: "https://images.pexels.com/photos/1542252/pexels-photo-1542252.jpeg",
+      is_available: true,
+      is_veg: false
+    },
+    {
+      id: "item22",
+      restaurant_id: "rest6",
+      name: "Vegetable Tempura",
+      description: "Crispy battered and fried seasonal vegetables",
+      price: 279,
+      category: "Appetizers",
+      image_url: "https://images.pexels.com/photos/1542252/pexels-photo-1542252.jpeg",
+      is_available: true,
+      is_veg: true
+    }
+  ],
+  "rest7": [
+    {
+      id: "item16",
+      restaurant_id: "rest7",
+      name: "Hyderabadi Chicken Biryani",
+      description: "Aromatic basmati rice with tender chicken pieces and saffron",
+      price: 379,
+      category: "Biryani",
+      image_url: "https://images.pexels.com/photos/1542252/pexels-photo-1542252.jpeg",
+      is_available: true,
+      is_veg: false
+    },
+    {
+      id: "item23",
+      restaurant_id: "rest7",
+      name: "Mutton Biryani",
+      description: "Premium mutton pieces cooked with fragrant basmati rice",
+      price: 449,
+      category: "Biryani",
+      image_url: "https://images.pexels.com/photos/1542252/pexels-photo-1542252.jpeg",
+      is_available: true,
+      is_veg: false
+    },
+    {
+      id: "item24",
+      restaurant_id: "rest7",
+      name: "Vegetable Biryani",
+      description: "Mixed vegetables and paneer cooked with aromatic spices",
+      price: 299,
+      category: "Biryani",
+      image_url: "https://images.pexels.com/photos/1542252/pexels-photo-1542252.jpeg",
+      is_available: true,
+      is_veg: true
+    }
+  ],
+  "rest8": [
+    {
+      id: "item25",
+      restaurant_id: "rest8",
+      name: "Greek Salad Bowl",
+      description: "Fresh lettuce, olives, feta cheese with olive oil dressing",
+      price: 199,
+      category: "Salads",
+      image_url: "https://images.pexels.com/photos/1542252/pexels-photo-1542252.jpeg",
+      is_available: true,
+      is_veg: true
+    },
+    {
+      id: "item26",
+      restaurant_id: "rest8",
+      name: "Grilled Chicken Salad",
+      description: "Lean grilled chicken with mixed greens and vinaigrette",
+      price: 249,
+      category: "Salads",
+      image_url: "https://images.pexels.com/photos/1542252/pexels-photo-1542252.jpeg",
+      is_available: true,
+      is_veg: false
+    },
+    {
+      id: "item27",
+      restaurant_id: "rest8",
+      name: "Acai Smoothie Bowl",
+      description: "Antioxidant-rich acai with granola and fresh berries",
+      price: 179,
+      category: "Smoothie Bowls",
       image_url: "https://images.pexels.com/photos/1542252/pexels-photo-1542252.jpeg",
       is_available: true,
       is_veg: true
