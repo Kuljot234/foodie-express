@@ -447,12 +447,26 @@ const SAMPLE_ORDERS = [
   }
 ];
 
+const CITIES = [
+  { id: 'delhi', name: 'Delhi', restaurants: ['rest1', 'rest7'] },
+  { id: 'mumbai', name: 'Mumbai', restaurants: ['rest2', 'rest8'] },
+  { id: 'bangalore', name: 'Bangalore', restaurants: ['rest3', 'rest6'] },
+  { id: 'chennai', name: 'Chennai', restaurants: ['rest4'] },
+  { id: 'pune', name: 'Pune', restaurants: ['rest5'] },
+  { id: 'hyderabad', name: 'Hyderabad', restaurants: ['rest6', 'rest7'] },
+  { id: 'all', name: 'All Cities', restaurants: ['rest1', 'rest2', 'rest3', 'rest4', 'rest5', 'rest6', 'rest7', 'rest8'] }
+];
+
+const CUISINES = ['All', 'Indian', 'Italian', 'American', 'Chinese', 'Mexican', 'Japanese', 'Healthy'];
+
 function App() {
   const [currentView, setCurrentView] = useState('customer');
   const [selectedRestaurant, setSelectedRestaurant] = useState(null);
   const [cart, setCart] = useState([]);
   const [orders, setOrders] = useState(SAMPLE_ORDERS);
   const [restaurants, setRestaurants] = useState(SAMPLE_RESTAURANTS);
+  const [selectedCity, setSelectedCity] = useState('all');
+  const [selectedCuisine, setSelectedCuisine] = useState('All');
 
   // Customer App Component
   const CustomerApp = () => {
