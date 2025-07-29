@@ -528,6 +528,14 @@ function App() {
       alert("Order placed successfully!");
     };
 
+    // Filter restaurants based on selected city and cuisine
+    const filteredRestaurants = restaurants.filter(restaurant => {
+      const cityMatch = selectedCity === 'all' || 
+        CITIES.find(city => city.id === selectedCity)?.restaurants.includes(restaurant.id);
+      const cuisineMatch = selectedCuisine === 'All' || restaurant.cuisine_type === selectedCuisine;
+      return cityMatch && cuisineMatch;
+    });
+
     if (selectedRestaurant) {
       const menuItems = SAMPLE_MENU_ITEMS[selectedRestaurant.id] || [];
       
